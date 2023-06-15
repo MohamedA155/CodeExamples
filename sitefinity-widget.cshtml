@@ -1,0 +1,28 @@
+//This a simple sitefinity widget that would serve user conference based on the    
+// users location.
+
+
+
+
+<!-- File: CustomConferencesWidgetTemplate.cshtml -->
+
+@inherits SitefinityWebApp.Mvc.Models.CustomConferencesWidget.CustomConferencesWidgetModel
+
+<div class="custom-conferences-widget">
+    <h2>Conferences near you:</h2>
+    <ul>
+        @foreach (var conference in Model.Conferences)
+        {
+            <li>
+                <h3>@conference.Name</h3>
+                <p>@conference.Location</p>
+                <a href="@conference.RegistrationLink">Sign Up</a>
+            </li>
+        }
+    </ul>
+</div>
+
+
+
+
+
